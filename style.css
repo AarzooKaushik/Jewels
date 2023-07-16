@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cormorant Garamond", serif;
+  color: #000000;
+}
+html {
+  font-size: 62.5%;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+.primary-heading {
+  font-size: 7.5rem;
+  line-height: 1.3em;
+}
+.primary-para {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.primary-btn {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  border: 1px solid #000000;
+  background: transparent;
+  margin-top: 3rem;
+  transition: 0.5s;
+}
+.primary-btn:hover {
+  background-color: #9f9c9c;
+  color: #000000;
+}
+nav {
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #cac7c7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4rem 6.4rem;
+  z-index: 999;
+}
+.nav-overlay {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.logo {
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+.navlist {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.navlist li {
+  font-size: 2rem;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+.navlist li:hover {
+  color: #232222;
+}
+.menu-btn {
+  font-size: 2.5rem;
+  color: #000000;
+  display: none;
+  cursor: pointer;
+}
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-content {
+  max-width: 60rem;
+  position: relative;
+  left: 8%;
+  z-index: 99;
+}
+.home-content p {
+  margin: 2rem 0;
+}
+
+.home-img {
+  position: relative;
+  min-width: 60%;
+  height: 100vh;
+}
+.home-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e7e6e6;
+  z-index: -1;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 58%;
+  }
+}
+@media (max-width: 1000px) {
+  .home-content {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    padding-left: 9.6rem;
+  }
+  .img-overlay {
+    width: 100%;
+  }
+  .home-img img {
+    filter: blur(4px);
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 1.2rem 2.4rem;
+  }
+  .navlist {
+    position: absolute;
+    top: -120vh;
+    right: 0;
+    height: 90vh;
+    width: 50%;
+    background-color: rgb(101, 99, 99);
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .navlist li {
+    color: white;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .hide-menu {
+    color: rgb(244, 170, 185);
+    font-size: 2rem;
+    display: none;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+  }
+}
+@media (max-width: 700px) {
+  .primary-heading {
+    font-size: 5.5rem;
+  }
+  .primary-para {
+    font-size: 1.8rem;
+  }
+  .home-content {
+    padding-left: 3.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .navlist {
+    width: 100%;
+  }
+}
